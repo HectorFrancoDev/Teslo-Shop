@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { JoiValidationSchema } from './config/joi.validation';
 import { EnvConfiguration } from './config/env.config';
 import { ProductsModule } from './products/products.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { ProductsModule } from './products/products.module';
       synchronize: true,
     }),
     ProductsModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
